@@ -1,0 +1,483 @@
+Hugging Face's logo
+
+Spaces:
+Rachit-Tw
+/
+Agentic-Space 
+
+like
+0
+
+App
+Files
+Community
+Settings
+Logs
+
+build
+container
+
+
+
+
+===== Application Startup at 2026-02-20 18:29:08 =====
+
+[2026-02-20 18:29:19 +0000] [1] [INFO] Starting gunicorn 25.0.1
+[2026-02-20 18:29:19 +0000] [1] [INFO] Listening at: http://0.0.0.0:7860 (1)
+[2026-02-20 18:29:19 +0000] [1] [INFO] Using worker: uvicorn.workers.UvicornWorker
+[2026-02-20 18:29:19 +0000] [7] [INFO] Booting worker with pid: 7
+WARNING: No GOOGLE_API_KEYS found. LLM features will fail.
+Failed to send telemetry event ClientStartEvent: capture() takes 1 positional argument but 3 were given
+Failed to send telemetry event ClientCreateCollectionEvent: capture() takes 1 positional argument but 3 were given
+{"asctime": "2026-02-20 18:29:22,724", "name": "app.engine.nodes", "levelname": "INFO", "message": "\ud83d\udddd\ufe0f Initialized with 20 prioritized LLM combinations (Groq first)."}
+{"asctime": "2026-02-20 18:29:22,724", "name": "app.engine.nodes", "levelname": "INFO", "message": "\ud83e\udd16 Initializing LLM: Provider=GROQ, Model=llama-3.1-8b-instant, Key Index=1"}
+[2026-02-20 18:29:22 +0000] [7] [INFO] Started server process [7]
+[2026-02-20 18:29:22 +0000] [7] [INFO] Waiting for application startup.
+INFO:app.main:🚀 Forensic Intelligence Platform active with AsyncSqliteSaver
+[2026-02-20 18:29:22 +0000] [7] [INFO] Application startup complete.
+{"asctime": "2026-02-20 18:31:16,668", "name": "app.engine.nodes", "levelname": "INFO", "message": "\ud83d\ude80 LLM Call (GROQ): Model=llama-3.1-8b-instant, Key=1, Attempt=1/20"}
+INFO:app.engine.nodes:🚀 LLM Call (GROQ): Model=llama-3.1-8b-instant, Key=1, Attempt=1/20
+INFO:httpx:HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 400 Bad Request"
+{"asctime": "2026-02-20 18:31:17,432", "name": "app.engine.nodes", "levelname": "WARNING", "message": "\u274c SCHEMA/400 ERROR (llama-3.1-8b-instant): Rotating to try different model."}
+WARNING:app.engine.nodes:❌ SCHEMA/400 ERROR (llama-3.1-8b-instant): Rotating to try different model.
+{"asctime": "2026-02-20 18:31:17,432", "name": "app.engine.nodes", "levelname": "WARNING", "message": "\ud83d\udd04 ROTATION: Switching to GROQ | Model: llama3-70b-8192 | KeyIdx: 1 due to 400 Error"}
+WARNING:app.engine.nodes:🔄 ROTATION: Switching to GROQ | Model: llama3-70b-8192 | KeyIdx: 1 due to 400 Error
+{"asctime": "2026-02-20 18:31:17,432", "name": "app.engine.nodes", "levelname": "INFO", "message": "\ud83e\udd16 Initializing LLM: Provider=GROQ, Model=llama3-70b-8192, Key Index=1"}
+INFO:app.engine.nodes:🤖 Initializing LLM: Provider=GROQ, Model=llama3-70b-8192, Key Index=1
+{"asctime": "2026-02-20 18:31:17,456", "name": "app.engine.nodes", "levelname": "INFO", "message": "\ud83d\ude80 LLM Call (GROQ): Model=llama3-70b-8192, Key=1, Attempt=2/20"}
+INFO:app.engine.nodes:🚀 LLM Call (GROQ): Model=llama3-70b-8192, Key=1, Attempt=2/20
+INFO:httpx:HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 400 Bad Request"
+{"asctime": "2026-02-20 18:31:17,525", "name": "app.engine.nodes", "levelname": "WARNING", "message": "\u274c SCHEMA/400 ERROR (llama3-70b-8192): Rotating to try different model."}
+WARNING:app.engine.nodes:❌ SCHEMA/400 ERROR (llama3-70b-8192): Rotating to try different model.
+{"asctime": "2026-02-20 18:31:17,525", "name": "app.engine.nodes", "levelname": "WARNING", "message": "\ud83d\udd04 ROTATION: Switching to GROQ | Model: mixtral-8x7b-32768 | KeyIdx: 1 due to 400 Error"}
+WARNING:app.engine.nodes:🔄 ROTATION: Switching to GROQ | Model: mixtral-8x7b-32768 | KeyIdx: 1 due to 400 Error
+{"asctime": "2026-02-20 18:31:17,525", "name": "app.engine.nodes", "levelname": "INFO", "message": "\ud83e\udd16 Initializing LLM: Provider=GROQ, Model=mixtral-8x7b-32768, Key Index=1"}
+INFO:app.engine.nodes:🤖 Initializing LLM: Provider=GROQ, Model=mixtral-8x7b-32768, Key Index=1
+{"asctime": "2026-02-20 18:31:17,550", "name": "app.engine.nodes", "levelname": "INFO", "message": "\ud83d\ude80 LLM Call (GROQ): Model=mixtral-8x7b-32768, Key=1, Attempt=3/20"}
+INFO:app.engine.nodes:🚀 LLM Call (GROQ): Model=mixtral-8x7b-32768, Key=1, Attempt=3/20
+INFO:httpx:HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 400 Bad Request"
+{"asctime": "2026-02-20 18:31:17,606", "name": "app.engine.nodes", "levelname": "WARNING", "message": "\u274c SCHEMA/400 ERROR (mixtral-8x7b-32768): Rotating to try different model."}
+WARNING:app.engine.nodes:❌ SCHEMA/400 ERROR (mixtral-8x7b-32768): Rotating to try different model.
+{"asctime": "2026-02-20 18:31:17,606", "name": "app.engine.nodes", "levelname": "WARNING", "message": "\ud83d\udd04 ROTATION: Switching to GROQ | Model: gemma2-9b-it | KeyIdx: 1 due to 400 Error"}
+WARNING:app.engine.nodes:🔄 ROTATION: Switching to GROQ | Model: gemma2-9b-it | KeyIdx: 1 due to 400 Error
+{"asctime": "2026-02-20 18:31:17,606", "name": "app.engine.nodes", "levelname": "INFO", "message": "\ud83e\udd16 Initializing LLM: Provider=GROQ, Model=gemma2-9b-it, Key Index=1"}
+INFO:app.engine.nodes:🤖 Initializing LLM: Provider=GROQ, Model=gemma2-9b-it, Key Index=1
+{"asctime": "2026-02-20 18:31:17,632", "name": "app.engine.nodes", "levelname": "INFO", "message": "\ud83d\ude80 LLM Call (GROQ): Model=gemma2-9b-it, Key=1, Attempt=4/20"}
+INFO:app.engine.nodes:🚀 LLM Call (GROQ): Model=gemma2-9b-it, Key=1, Attempt=4/20
+INFO:httpx:HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 400 Bad Request"
+{"asctime": "2026-02-20 18:31:17,692", "name": "app.engine.nodes", "levelname": "WARNING", "message": "\u274c SCHEMA/400 ERROR (gemma2-9b-it): Rotating to try different model."}
+WARNING:app.engine.nodes:❌ SCHEMA/400 ERROR (gemma2-9b-it): Rotating to try different model.
+{"asctime": "2026-02-20 18:31:17,692", "name": "app.engine.nodes", "levelname": "WARNING", "message": "\ud83d\udd04 ROTATION: Switching to GROQ | Model: qwen/qwen-2.5-32b | KeyIdx: 1 due to 400 Error"}
+WARNING:app.engine.nodes:🔄 ROTATION: Switching to GROQ | Model: qwen/qwen-2.5-32b | KeyIdx: 1 due to 400 Error
+{"asctime": "2026-02-20 18:31:17,692", "name": "app.engine.nodes", "levelname": "INFO", "message": "\ud83e\udd16 Initializing LLM: Provider=GROQ, Model=qwen/qwen-2.5-32b, Key Index=1"}
+INFO:app.engine.nodes:🤖 Initializing LLM: Provider=GROQ, Model=qwen/qwen-2.5-32b, Key Index=1
+{"asctime": "2026-02-20 18:31:17,716", "name": "app.engine.nodes", "levelname": "INFO", "message": "\ud83d\ude80 LLM Call (GROQ): Model=qwen/qwen-2.5-32b, Key=1, Attempt=5/20"}
+INFO:app.engine.nodes:🚀 LLM Call (GROQ): Model=qwen/qwen-2.5-32b, Key=1, Attempt=5/20
+INFO:httpx:HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 404 Not Found"
+{"asctime": "2026-02-20 18:31:17,776", "name": "app.engine.nodes", "levelname": "WARNING", "message": "\u274c SCHEMA/400 ERROR (qwen/qwen-2.5-32b): Rotating to try different model."}
+WARNING:app.engine.nodes:❌ SCHEMA/400 ERROR (qwen/qwen-2.5-32b): Rotating to try different model.
+{"asctime": "2026-02-20 18:31:17,776", "name": "app.engine.nodes", "levelname": "WARNING", "message": "\ud83d\udd04 ROTATION: Switching to GROQ | Model: deepseek-r1-distill-llama-70b | KeyIdx: 1 due to 400 Error"}
+WARNING:app.engine.nodes:🔄 ROTATION: Switching to GROQ | Model: deepseek-r1-distill-llama-70b | KeyIdx: 1 due to 400 Error
+{"asctime": "2026-02-20 18:31:17,776", "name": "app.engine.nodes", "levelname": "INFO", "message": "\ud83e\udd16 Initializing LLM: Provider=GROQ, Model=deepseek-r1-distill-llama-70b, Key Index=1"}
+INFO:app.engine.nodes:🤖 Initializing LLM: Provider=GROQ, Model=deepseek-r1-distill-llama-70b, Key Index=1
+{"asctime": "2026-02-20 18:31:17,798", "name": "app.engine.nodes", "levelname": "INFO", "message": "\ud83d\ude80 LLM Call (GROQ): Model=deepseek-r1-distill-llama-70b, Key=1, Attempt=6/20"}
+INFO:app.engine.nodes:🚀 LLM Call (GROQ): Model=deepseek-r1-distill-llama-70b, Key=1, Attempt=6/20
+INFO:httpx:HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 400 Bad Request"
+{"asctime": "2026-02-20 18:31:17,859", "name": "app.engine.nodes", "levelname": "WARNING", "message": "\u274c SCHEMA/400 ERROR (deepseek-r1-distill-llama-70b): Rotating to try different model."}
+WARNING:app.engine.nodes:❌ SCHEMA/400 ERROR (deepseek-r1-distill-llama-70b): Rotating to try different model.
+{"asctime": "2026-02-20 18:31:17,859", "name": "app.engine.nodes", "levelname": "WARNING", "message": "\ud83d\udd04 ROTATION: Switching to GROQ | Model: meta-llama/llama-3.3-70b-specdec | KeyIdx: 1 due to 400 Error"}
+WARNING:app.engine.nodes:🔄 ROTATION: Switching to GROQ | Model: meta-llama/llama-3.3-70b-specdec | KeyIdx: 1 due to 400 Error
+{"asctime": "2026-02-20 18:31:17,859", "name": "app.engine.nodes", "levelname": "INFO", "message": "\ud83e\udd16 Initializing LLM: Provider=GROQ, Model=meta-llama/llama-3.3-70b-specdec, Key Index=1"}
+INFO:app.engine.nodes:🤖 Initializing LLM: Provider=GROQ, Model=meta-llama/llama-3.3-70b-specdec, Key Index=1
+{"asctime": "2026-02-20 18:31:17,887", "name": "app.engine.nodes", "levelname": "INFO", "message": "\ud83d\ude80 LLM Call (GROQ): Model=meta-llama/llama-3.3-70b-specdec, Key=1, Attempt=7/20"}
+INFO:app.engine.nodes:🚀 LLM Call (GROQ): Model=meta-llama/llama-3.3-70b-specdec, Key=1, Attempt=7/20
+INFO:httpx:HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 404 Not Found"
+{"asctime": "2026-02-20 18:31:17,952", "name": "app.engine.nodes", "levelname": "WARNING", "message": "\u274c SCHEMA/400 ERROR (meta-llama/llama-3.3-70b-specdec): Rotating to try different model."}
+WARNING:app.engine.nodes:❌ SCHEMA/400 ERROR (meta-llama/llama-3.3-70b-specdec): Rotating to try different model.
+{"asctime": "2026-02-20 18:31:17,952", "name": "app.engine.nodes", "levelname": "WARNING", "message": "\ud83d\udd04 ROTATION: Switching to GROQ | Model: meta-llama/llama-3.3-70b-versatile | KeyIdx: 1 due to 400 Error"}
+WARNING:app.engine.nodes:🔄 ROTATION: Switching to GROQ | Model: meta-llama/llama-3.3-70b-versatile | KeyIdx: 1 due to 400 Error
+{"asctime": "2026-02-20 18:31:17,952", "name": "app.engine.nodes", "levelname": "INFO", "message": "\ud83e\udd16 Initializing LLM: Provider=GROQ, Model=meta-llama/llama-3.3-70b-versatile, Key Index=1"}
+INFO:app.engine.nodes:🤖 Initializing LLM: Provider=GROQ, Model=meta-llama/llama-3.3-70b-versatile, Key Index=1
+{"asctime": "2026-02-20 18:31:17,977", "name": "app.engine.nodes", "levelname": "INFO", "message": "\ud83d\ude80 LLM Call (GROQ): Model=meta-llama/llama-3.3-70b-versatile, Key=1, Attempt=8/20"}
+INFO:app.engine.nodes:🚀 LLM Call (GROQ): Model=meta-llama/llama-3.3-70b-versatile, Key=1, Attempt=8/20
+INFO:httpx:HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 404 Not Found"
+{"asctime": "2026-02-20 18:31:18,038", "name": "app.engine.nodes", "levelname": "WARNING", "message": "\u274c SCHEMA/400 ERROR (meta-llama/llama-3.3-70b-versatile): Rotating to try different model."}
+WARNING:app.engine.nodes:❌ SCHEMA/400 ERROR (meta-llama/llama-3.3-70b-versatile): Rotating to try different model.
+{"asctime": "2026-02-20 18:31:18,038", "name": "app.engine.nodes", "levelname": "WARNING", "message": "\ud83d\udd04 ROTATION: Switching to GROQ | Model: openai/gpt-oss-120b | KeyIdx: 1 due to 400 Error"}
+WARNING:app.engine.nodes:🔄 ROTATION: Switching to GROQ | Model: openai/gpt-oss-120b | KeyIdx: 1 due to 400 Error
+{"asctime": "2026-02-20 18:31:18,038", "name": "app.engine.nodes", "levelname": "INFO", "message": "\ud83e\udd16 Initializing LLM: Provider=GROQ, Model=openai/gpt-oss-120b, Key Index=1"}
+INFO:app.engine.nodes:🤖 Initializing LLM: Provider=GROQ, Model=openai/gpt-oss-120b, Key Index=1
+{"asctime": "2026-02-20 18:31:18,062", "name": "app.engine.nodes", "levelname": "INFO", "message": "\ud83d\ude80 LLM Call (GROQ): Model=openai/gpt-oss-120b, Key=1, Attempt=9/20"}
+INFO:app.engine.nodes:🚀 LLM Call (GROQ): Model=openai/gpt-oss-120b, Key=1, Attempt=9/20
+INFO:httpx:HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+{"asctime": "2026-02-20 18:31:22,050", "name": "app.engine.nodes", "levelname": "INFO", "message": "\ud83d\ude80 LLM Call (GROQ): Model=openai/gpt-oss-120b, Key=1, Attempt=1/20"}
+INFO:app.engine.nodes:🚀 LLM Call (GROQ): Model=openai/gpt-oss-120b, Key=1, Attempt=1/20
+INFO:httpx:HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+INFO:httpx:HTTP Request: GET https://chroma-onnx-models.s3.amazonaws.com/all-MiniLM-L6-v2/onnx.tar.gz "HTTP/1.1 200 OK"
+/root/.cache/chroma/onnx_models/all-MiniLM-L6-v2/onnx.tar.gz:   0%|          | 0.00/79.3M [00:00<?, ?iB/s]
+/root/.cache/chroma/onnx_models/all-MiniLM-L6-v2/onnx.tar.gz:  18%|█▊        | 14.3M/79.3M [00:00<00:00, 150MiB/s]
+/root/.cache/chroma/onnx_models/all-MiniLM-L6-v2/onnx.tar.gz:  36%|███▌      | 28.7M/79.3M [00:00<00:00, 116MiB/s]
+/root/.cache/chroma/onnx_models/all-MiniLM-L6-v2/onnx.tar.gz:  51%|█████     | 40.2M/79.3M [00:00<00:00, 109MiB/s]
+/root/.cache/chroma/onnx_models/all-MiniLM-L6-v2/onnx.tar.gz:  64%|██████▍   | 50.8M/79.3M [00:00<00:00, 106MiB/s]
+/root/.cache/chroma/onnx_models/all-MiniLM-L6-v2/onnx.tar.gz:  77%|███████▋  | 61.0M/79.3M [00:00<00:00, 104MiB/s]
+/root/.cache/chroma/onnx_models/all-MiniLM-L6-v2/onnx.tar.gz:  89%|████████▉ | 70.9M/79.3M [00:00<00:00, 103MiB/s]
+/root/.cache/chroma/onnx_models/all-MiniLM-L6-v2/onnx.tar.gz: 100%|██████████| 79.3M/79.3M [00:00<00:00, 106MiB/s]
+ERROR:chromadb.telemetry.product.posthog:Failed to send telemetry event CollectionQueryEvent: capture() takes 1 positional argument but 3 were given
+ERROR:chromadb.telemetry.product.posthog:Failed to send telemetry event CollectionAddEvent: capture() takes 1 positional argument but 3 were given
+{"asctime": "2026-02-20 18:31:26,063", "name": "app.engine.nodes", "levelname": "INFO", "message": "Session 07e7b5f8-a89a-477e-ba84-7afec43a029a Sentiment: 5"}
+INFO:app.engine.nodes:Session 07e7b5f8-a89a-477e-ba84-7afec43a029a Sentiment: 5
+{"asctime": "2026-02-20 18:31:28,903", "name": "app.engine.nodes", "levelname": "INFO", "message": "\ud83d\ude80 LLM Call (GROQ): Model=openai/gpt-oss-120b, Key=1, Attempt=1/20"}
+INFO:app.engine.nodes:🚀 LLM Call (GROQ): Model=openai/gpt-oss-120b, Key=1, Attempt=1/20
+INFO:httpx:HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+{"asctime": "2026-02-20 18:31:32,584", "name": "app.engine.nodes", "levelname": "INFO", "message": "\ud83d\ude80 LLM Call (GROQ): Model=openai/gpt-oss-120b, Key=1, Attempt=1/20"}
+INFO:app.engine.nodes:🚀 LLM Call (GROQ): Model=openai/gpt-oss-120b, Key=1, Attempt=1/20
+INFO:httpx:HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+WARNING:chromadb.segment.impl.vector.local_persistent_hnsw:Number of requested results 3 is greater than number of elements in index 1, updating n_results = 1
+{"asctime": "2026-02-20 18:31:35,104", "name": "app.engine.nodes", "levelname": "INFO", "message": "\ud83d\udd75\ufe0f SYNDICATE PATTERN MATCHED", "match_score": 1.0, "profile": "\n        INTENT: True\n        SENTIMENT: 5\n        PERSONA_TARGETED: RAJESH\n        IDENTIFIERS: \n        "}
+INFO:app.engine.nodes:🕵️ SYNDICATE PATTERN MATCHED
+WARNING:chromadb.segment.impl.vector.local_persistent_hnsw:Add of existing embedding ID: 07e7b5f8-a89a-477e-ba84-7afec43a029a
+WARNING:chromadb.segment.impl.metadata.sqlite:Insert of existing embedding ID: 07e7b5f8-a89a-477e-ba84-7afec43a029a
+{"asctime": "2026-02-20 18:31:35,349", "name": "app.engine.nodes", "levelname": "INFO", "message": "Session 07e7b5f8-a89a-477e-ba84-7afec43a029a Sentiment: 5"}
+INFO:app.engine.nodes:Session 07e7b5f8-a89a-477e-ba84-7afec43a029a Sentiment: 5
+{"asctime": "2026-02-20 18:31:37,220", "name": "app.engine.nodes", "levelname": "INFO", "message": "\ud83d\ude80 LLM Call (GROQ): Model=openai/gpt-oss-120b, Key=1, Attempt=1/20"}
+INFO:app.engine.nodes:🚀 LLM Call (GROQ): Model=openai/gpt-oss-120b, Key=1, Attempt=1/20
+INFO:httpx:HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
+{"asctime": "2026-02-20 18:31:37,273", "name": "app.engine.nodes", "levelname": "WARNING", "message": "\u26a0\ufe0f RATE LIMIT (openai/gpt-oss-120b): Blacklisting index 8 for 120s. Error: Error code: 429 - {'error': {'message': 'Rate limit reached for model `openai/gpt-oss-120b` in organization `org_01kgqhwjhvfarvnkqfknpyj35m` service tier `on_demand` on tokens per minute (TPM): Limit 8000, Used 6846, Requested 2094. Please try again in 7.05s. Need more tokens? Upgrade to Dev Tier today at https://console.groq.com/settings/billing', 'type': 'tokens', 'code': 'rate_limit_exceeded'}}"}
+WARNING:app.engine.nodes:⚠️ RATE LIMIT (openai/gpt-oss-120b): Blacklisting index 8 for 120s. Error: Error code: 429 - {'error': {'message': 'Rate limit reached for model `openai/gpt-oss-120b` in organization `org_01kgqhwjhvfarvnkqfknpyj35m` service tier `on_demand` on tokens per minute (TPM): Limit 8000, Used 6846, Requested 2094. Please try again in 7.05s. Need more tokens? Upgrade to Dev Tier today at https://console.groq.com/settings/billing', 'type': 'tokens', 'code': 'rate_limit_exceeded'}}
+{"asctime": "2026-02-20 18:31:37,273", "name": "app.engine.nodes", "levelname": "WARNING", "message": "\ud83d\udd04 ROTATION: Switching to GROQ | Model: qwen/qwen-2.5-coder-32b | KeyIdx: 1 due to Rate Limit Recovery"}
+WARNING:app.engine.nodes:🔄 ROTATION: Switching to GROQ | Model: qwen/qwen-2.5-coder-32b | KeyIdx: 1 due to Rate Limit Recovery
+{"asctime": "2026-02-20 18:31:37,273", "name": "app.engine.nodes", "levelname": "INFO", "message": "\ud83e\udd16 Initializing LLM: Provider=GROQ, Model=qwen/qwen-2.5-coder-32b, Key Index=1"}
+INFO:app.engine.nodes:🤖 Initializing LLM: Provider=GROQ, Model=qwen/qwen-2.5-coder-32b, Key Index=1
+{"asctime": "2026-02-20 18:31:37,299", "name": "app.engine.nodes", "levelname": "INFO", "message": "\ud83d\ude80 LLM Call (GROQ): Model=qwen/qwen-2.5-coder-32b, Key=1, Attempt=2/20"}
+INFO:app.engine.nodes:🚀 LLM Call (GROQ): Model=qwen/qwen-2.5-coder-32b, Key=1, Attempt=2/20
+INFO:httpx:HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 404 Not Found"
+{"asctime": "2026-02-20 18:31:37,368", "name": "app.engine.nodes", "levelname": "WARNING", "message": "\u274c SCHEMA/400 ERROR (qwen/qwen-2.5-coder-32b): Rotating to try different model."}
+WARNING:app.engine.nodes:❌ SCHEMA/400 ERROR (qwen/qwen-2.5-coder-32b): Rotating to try different model.
+{"asctime": "2026-02-20 18:31:37,368", "name": "app.engine.nodes", "levelname": "WARNING", "message": "\ud83d\udd04 ROTATION: Switching to GROQ | Model: llama-3.1-8b-instant | KeyIdx: 2 due to 400 Error"}
+WARNING:app.engine.nodes:🔄 ROTATION: Switching to GROQ | Model: llama-3.1-8b-instant | KeyIdx: 2 due to 400 Error
+{"asctime": "2026-02-20 18:31:37,368", "name": "app.engine.nodes", "levelname": "INFO", "message": "\ud83e\udd16 Initializing LLM: Provider=GROQ, Model=llama-3.1-8b-instant, Key Index=2"}
+INFO:app.engine.nodes:🤖 Initializing LLM: Provider=GROQ, Model=llama-3.1-8b-instant, Key Index=2
+{"asctime": "2026-02-20 18:31:37,404", "name": "app.engine.nodes", "levelname": "INFO", "message": "\ud83d\ude80 LLM Call (GROQ): Model=llama-3.1-8b-instant, Key=2, Attempt=3/20"}
+INFO:app.engine.nodes:🚀 LLM Call (GROQ): Model=llama-3.1-8b-instant, Key=2, Attempt=3/20
+INFO:httpx:HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 400 Bad Request"
+{"asctime": "2026-02-20 18:31:37,662", "name": "app.engine.nodes", "levelname": "WARNING", "message": "\u274c SCHEMA/400 ERROR (llama-3.1-8b-instant): Rotating to try different model."}
+WARNING:app.engine.nodes:❌ SCHEMA/400 ERROR (llama-3.1-8b-instant): Rotating to try different model.
+{"asctime": "2026-02-20 18:31:37,662", "name": "app.engine.nodes", "levelname": "WARNING", "message": "\ud83d\udd04 ROTATION: Switching to GROQ | Model: llama3-70b-8192 | KeyIdx: 2 due to 400 Error"}
+WARNING:app.engine.nodes:🔄 ROTATION: Switching to GROQ | Model: llama3-70b-8192 | KeyIdx: 2 due to 400 Error
+{"asctime": "2026-02-20 18:31:37,662", "name": "app.engine.nodes", "levelname": "INFO", "message": "\ud83e\udd16 Initializing LLM: Provider=GROQ, Model=llama3-70b-8192, Key Index=2"}
+INFO:app.engine.nodes:🤖 Initializing LLM: Provider=GROQ, Model=llama3-70b-8192, Key Index=2
+{"asctime": "2026-02-20 18:31:37,695", "name": "app.engine.nodes", "levelname": "INFO", "message": "\ud83d\ude80 LLM Call (GROQ): Model=llama3-70b-8192, Key=2, Attempt=4/20"}
+INFO:app.engine.nodes:🚀 LLM Call (GROQ): Model=llama3-70b-8192, Key=2, Attempt=4/20
+INFO:httpx:HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 400 Bad Request"
+{"asctime": "2026-02-20 18:31:37,760", "name": "app.engine.nodes", "levelname": "WARNING", "message": "\u274c SCHEMA/400 ERROR (llama3-70b-8192): Rotating to try different model."}
+WARNING:app.engine.nodes:❌ SCHEMA/400 ERROR (llama3-70b-8192): Rotating to try different model.
+{"asctime": "2026-02-20 18:31:37,760", "name": "app.engine.nodes", "levelname": "WARNING", "message": "\ud83d\udd04 ROTATION: Switching to GROQ | Model: mixtral-8x7b-32768 | KeyIdx: 2 due to 400 Error"}
+WARNING:app.engine.nodes:🔄 ROTATION: Switching to GROQ | Model: mixtral-8x7b-32768 | KeyIdx: 2 due to 400 Error
+{"asctime": "2026-02-20 18:31:37,760", "name": "app.engine.nodes", "levelname": "INFO", "message": "\ud83e\udd16 Initializing LLM: Provider=GROQ, Model=mixtral-8x7b-32768, Key Index=2"}
+INFO:app.engine.nodes:🤖 Initializing LLM: Provider=GROQ, Model=mixtral-8x7b-32768, Key Index=2
+{"asctime": "2026-02-20 18:31:37,786", "name": "app.engine.nodes", "levelname": "INFO", "message": "\ud83d\ude80 LLM Call (GROQ): Model=mixtral-8x7b-32768, Key=2, Attempt=5/20"}
+INFO:app.engine.nodes:🚀 LLM Call (GROQ): Model=mixtral-8x7b-32768, Key=2, Attempt=5/20
+INFO:httpx:HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 400 Bad Request"
+{"asctime": "2026-02-20 18:31:37,869", "name": "app.engine.nodes", "levelname": "WARNING", "message": "\u274c SCHEMA/400 ERROR (mixtral-8x7b-32768): Rotating to try different model."}
+WARNING:app.engine.nodes:❌ SCHEMA/400 ERROR (mixtral-8x7b-32768): Rotating to try different model.
+{"asctime": "2026-02-20 18:31:37,869", "name": "app.engine.nodes", "levelname": "WARNING", "message": "\ud83d\udd04 ROTATION: Switching to GROQ | Model: gemma2-9b-it | KeyIdx: 2 due to 400 Error"}
+WARNING:app.engine.nodes:🔄 ROTATION: Switching to GROQ | Model: gemma2-9b-it | KeyIdx: 2 due to 400 Error
+{"asctime": "2026-02-20 18:31:37,869", "name": "app.engine.nodes", "levelname": "INFO", "message": "\ud83e\udd16 Initializing LLM: Provider=GROQ, Model=gemma2-9b-it, Key Index=2"}
+INFO:app.engine.nodes:🤖 Initializing LLM: Provider=GROQ, Model=gemma2-9b-it, Key Index=2
+{"asctime": "2026-02-20 18:31:37,895", "name": "app.engine.nodes", "levelname": "INFO", "message": "\ud83d\ude80 LLM Call (GROQ): Model=gemma2-9b-it, Key=2, Attempt=6/20"}
+INFO:app.engine.nodes:🚀 LLM Call (GROQ): Model=gemma2-9b-it, Key=2, Attempt=6/20
+INFO:httpx:HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 400 Bad Request"
+{"asctime": "2026-02-20 18:31:37,963", "name": "app.engine.nodes", "levelname": "WARNING", "message": "\u274c SCHEMA/400 ERROR (gemma2-9b-it): Rotating to try different model."}
+WARNING:app.engine.nodes:❌ SCHEMA/400 ERROR (gemma2-9b-it): Rotating to try different model.
+{"asctime": "2026-02-20 18:31:37,963", "name": "app.engine.nodes", "levelname": "WARNING", "message": "\ud83d\udd04 ROTATION: Switching to GROQ | Model: qwen/qwen-2.5-32b | KeyIdx: 2 due to 400 Error"}
+WARNING:app.engine.nodes:🔄 ROTATION: Switching to GROQ | Model: qwen/qwen-2.5-32b | KeyIdx: 2 due to 400 Error
+{"asctime": "2026-02-20 18:31:37,964", "name": "app.engine.nodes", "levelname": "INFO", "message": "\ud83e\udd16 Initializing LLM: Provider=GROQ, Model=qwen/qwen-2.5-32b, Key Index=2"}
+INFO:app.engine.nodes:🤖 Initializing LLM: Provider=GROQ, Model=qwen/qwen-2.5-32b, Key Index=2
+{"asctime": "2026-02-20 18:31:37,989", "name": "app.engine.nodes", "levelname": "INFO", "message": "\ud83d\ude80 LLM Call (GROQ): Model=qwen/qwen-2.5-32b, Key=2, Attempt=7/20"}
+INFO:app.engine.nodes:🚀 LLM Call (GROQ): Model=qwen/qwen-2.5-32b, Key=2, Attempt=7/20
+INFO:httpx:HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 404 Not Found"
+{"asctime": "2026-02-20 18:31:38,050", "name": "app.engine.nodes", "levelname": "WARNING", "message": "\u274c SCHEMA/400 ERROR (qwen/qwen-2.5-32b): Rotating to try different model."}
+WARNING:app.engine.nodes:❌ SCHEMA/400 ERROR (qwen/qwen-2.5-32b): Rotating to try different model.
+{"asctime": "2026-02-20 18:31:38,050", "name": "app.engine.nodes", "levelname": "WARNING", "message": "\ud83d\udd04 ROTATION: Switching to GROQ | Model: deepseek-r1-distill-llama-70b | KeyIdx: 2 due to 400 Error"}
+WARNING:app.engine.nodes:🔄 ROTATION: Switching to GROQ | Model: deepseek-r1-distill-llama-70b | KeyIdx: 2 due to 400 Error
+{"asctime": "2026-02-20 18:31:38,051", "name": "app.engine.nodes", "levelname": "INFO", "message": "\ud83e\udd16 Initializing LLM: Provider=GROQ, Model=deepseek-r1-distill-llama-70b, Key Index=2"}
+INFO:app.engine.nodes:🤖 Initializing LLM: Provider=GROQ, Model=deepseek-r1-distill-llama-70b, Key Index=2
+{"asctime": "2026-02-20 18:31:38,075", "name": "app.engine.nodes", "levelname": "INFO", "message": "\ud83d\ude80 LLM Call (GROQ): Model=deepseek-r1-distill-llama-70b, Key=2, Attempt=8/20"}
+INFO:app.engine.nodes:🚀 LLM Call (GROQ): Model=deepseek-r1-distill-llama-70b, Key=2, Attempt=8/20
+INFO:httpx:HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 400 Bad Request"
+{"asctime": "2026-02-20 18:31:38,132", "name": "app.engine.nodes", "levelname": "WARNING", "message": "\u274c SCHEMA/400 ERROR (deepseek-r1-distill-llama-70b): Rotating to try different model."}
+WARNING:app.engine.nodes:❌ SCHEMA/400 ERROR (deepseek-r1-distill-llama-70b): Rotating to try different model.
+{"asctime": "2026-02-20 18:31:38,132", "name": "app.engine.nodes", "levelname": "WARNING", "message": "\ud83d\udd04 ROTATION: Switching to GROQ | Model: meta-llama/llama-3.3-70b-specdec | KeyIdx: 2 due to 400 Error"}
+WARNING:app.engine.nodes:🔄 ROTATION: Switching to GROQ | Model: meta-llama/llama-3.3-70b-specdec | KeyIdx: 2 due to 400 Error
+{"asctime": "2026-02-20 18:31:38,132", "name": "app.engine.nodes", "levelname": "INFO", "message": "\ud83e\udd16 Initializing LLM: Provider=GROQ, Model=meta-llama/llama-3.3-70b-specdec, Key Index=2"}
+INFO:app.engine.nodes:🤖 Initializing LLM: Provider=GROQ, Model=meta-llama/llama-3.3-70b-specdec, Key Index=2
+{"asctime": "2026-02-20 18:31:38,158", "name": "app.engine.nodes", "levelname": "INFO", "message": "\ud83d\ude80 LLM Call (GROQ): Model=meta-llama/llama-3.3-70b-specdec, Key=2, Attempt=9/20"}
+INFO:app.engine.nodes:🚀 LLM Call (GROQ): Model=meta-llama/llama-3.3-70b-specdec, Key=2, Attempt=9/20
+INFO:httpx:HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 404 Not Found"
+{"asctime": "2026-02-20 18:31:38,218", "name": "app.engine.nodes", "levelname": "WARNING", "message": "\u274c SCHEMA/400 ERROR (meta-llama/llama-3.3-70b-specdec): Rotating to try different model."}
+WARNING:app.engine.nodes:❌ SCHEMA/400 ERROR (meta-llama/llama-3.3-70b-specdec): Rotating to try different model.
+{"asctime": "2026-02-20 18:31:38,218", "name": "app.engine.nodes", "levelname": "WARNING", "message": "\ud83d\udd04 ROTATION: Switching to GROQ | Model: meta-llama/llama-3.3-70b-versatile | KeyIdx: 2 due to 400 Error"}
+WARNING:app.engine.nodes:🔄 ROTATION: Switching to GROQ | Model: meta-llama/llama-3.3-70b-versatile | KeyIdx: 2 due to 400 Error
+{"asctime": "2026-02-20 18:31:38,218", "name": "app.engine.nodes", "levelname": "INFO", "message": "\ud83e\udd16 Initializing LLM: Provider=GROQ, Model=meta-llama/llama-3.3-70b-versatile, Key Index=2"}
+INFO:app.engine.nodes:🤖 Initializing LLM: Provider=GROQ, Model=meta-llama/llama-3.3-70b-versatile, Key Index=2
+{"asctime": "2026-02-20 18:31:38,241", "name": "app.engine.nodes", "levelname": "INFO", "message": "\ud83d\ude80 LLM Call (GROQ): Model=meta-llama/llama-3.3-70b-versatile, Key=2, Attempt=10/20"}
+INFO:app.engine.nodes:🚀 LLM Call (GROQ): Model=meta-llama/llama-3.3-70b-versatile, Key=2, Attempt=10/20
+INFO:httpx:HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 404 Not Found"
+{"asctime": "2026-02-20 18:31:38,337", "name": "app.engine.nodes", "levelname": "WARNING", "message": "\u274c SCHEMA/400 ERROR (meta-llama/llama-3.3-70b-versatile): Rotating to try different model."}
+WARNING:app.engine.nodes:❌ SCHEMA/400 ERROR (meta-llama/llama-3.3-70b-versatile): Rotating to try different model.
+{"asctime": "2026-02-20 18:31:38,337", "name": "app.engine.nodes", "levelname": "WARNING", "message": "\ud83d\udd04 ROTATION: Switching to GROQ | Model: openai/gpt-oss-120b | KeyIdx: 2 due to 400 Error"}
+WARNING:app.engine.nodes:🔄 ROTATION: Switching to GROQ | Model: openai/gpt-oss-120b | KeyIdx: 2 due to 400 Error
+{"asctime": "2026-02-20 18:31:38,337", "name": "app.engine.nodes", "levelname": "INFO", "message": "\ud83e\udd16 Initializing LLM: Provider=GROQ, Model=openai/gpt-oss-120b, Key Index=2"}
+INFO:app.engine.nodes:🤖 Initializing LLM: Provider=GROQ, Model=openai/gpt-oss-120b, Key Index=2
+{"asctime": "2026-02-20 18:31:38,362", "name": "app.engine.nodes", "levelname": "INFO", "message": "\ud83d\ude80 LLM Call (GROQ): Model=openai/gpt-oss-120b, Key=2, Attempt=11/20"}
+INFO:app.engine.nodes:🚀 LLM Call (GROQ): Model=openai/gpt-oss-120b, Key=2, Attempt=11/20
+INFO:httpx:HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+{"asctime": "2026-02-20 18:31:43,206", "name": "app.engine.nodes", "levelname": "INFO", "message": "\ud83d\ude80 LLM Call (GROQ): Model=openai/gpt-oss-120b, Key=2, Attempt=1/20"}
+INFO:app.engine.nodes:🚀 LLM Call (GROQ): Model=openai/gpt-oss-120b, Key=2, Attempt=1/20
+INFO:httpx:HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+WARNING:chromadb.segment.impl.vector.local_persistent_hnsw:Number of requested results 3 is greater than number of elements in index 1, updating n_results = 1
+{"asctime": "2026-02-20 18:31:45,304", "name": "app.engine.nodes", "levelname": "INFO", "message": "\ud83d\udd75\ufe0f SYNDICATE PATTERN MATCHED", "match_score": 0.9717378617188863, "profile": "\n        INTENT: True\n        SENTIMENT: 6\n        PERSONA_TARGETED: RAJESH\n        IDENTIFIERS: \n        "}
+INFO:app.engine.nodes:🕵️ SYNDICATE PATTERN MATCHED
+WARNING:chromadb.segment.impl.vector.local_persistent_hnsw:Add of existing embedding ID: 07e7b5f8-a89a-477e-ba84-7afec43a029a
+WARNING:chromadb.segment.impl.metadata.sqlite:Insert of existing embedding ID: 07e7b5f8-a89a-477e-ba84-7afec43a029a
+{"asctime": "2026-02-20 18:31:45,459", "name": "app.engine.nodes", "levelname": "INFO", "message": "Session 07e7b5f8-a89a-477e-ba84-7afec43a029a Sentiment: 6"}
+INFO:app.engine.nodes:Session 07e7b5f8-a89a-477e-ba84-7afec43a029a Sentiment: 6
+{"asctime": "2026-02-20 18:31:47,902", "name": "app.engine.nodes", "levelname": "INFO", "message": "\ud83d\ude80 LLM Call (GROQ): Model=openai/gpt-oss-120b, Key=2, Attempt=1/20"}
+INFO:app.engine.nodes:🚀 LLM Call (GROQ): Model=openai/gpt-oss-120b, Key=2, Attempt=1/20
+INFO:httpx:HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+{"asctime": "2026-02-20 18:31:52,041", "name": "app.engine.nodes", "levelname": "INFO", "message": "\ud83d\ude80 LLM Call (GROQ): Model=openai/gpt-oss-120b, Key=2, Attempt=1/20"}
+INFO:app.engine.nodes:🚀 LLM Call (GROQ): Model=openai/gpt-oss-120b, Key=2, Attempt=1/20
+INFO:httpx:HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+WARNING:chromadb.segment.impl.vector.local_persistent_hnsw:Number of requested results 3 is greater than number of elements in index 1, updating n_results = 1
+{"asctime": "2026-02-20 18:31:54,480", "name": "app.engine.nodes", "levelname": "INFO", "message": "\ud83d\udd75\ufe0f SYNDICATE PATTERN MATCHED", "match_score": 0.9717378617188863, "profile": "\n        INTENT: True\n        SENTIMENT: 6\n        PERSONA_TARGETED: RAJESH\n        IDENTIFIERS: \n        "}
+INFO:app.engine.nodes:🕵️ SYNDICATE PATTERN MATCHED
+WARNING:chromadb.segment.impl.vector.local_persistent_hnsw:Add of existing embedding ID: 07e7b5f8-a89a-477e-ba84-7afec43a029a
+WARNING:chromadb.segment.impl.metadata.sqlite:Insert of existing embedding ID: 07e7b5f8-a89a-477e-ba84-7afec43a029a
+{"asctime": "2026-02-20 18:31:54,655", "name": "app.engine.nodes", "levelname": "INFO", "message": "Session 07e7b5f8-a89a-477e-ba84-7afec43a029a Sentiment: 6"}
+INFO:app.engine.nodes:Session 07e7b5f8-a89a-477e-ba84-7afec43a029a Sentiment: 6
+{"asctime": "2026-02-20 18:31:56,915", "name": "app.engine.nodes", "levelname": "INFO", "message": "\ud83d\ude80 LLM Call (GROQ): Model=openai/gpt-oss-120b, Key=2, Attempt=1/20"}
+INFO:app.engine.nodes:🚀 LLM Call (GROQ): Model=openai/gpt-oss-120b, Key=2, Attempt=1/20
+INFO:httpx:HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
+{"asctime": "2026-02-20 18:31:56,983", "name": "app.engine.nodes", "levelname": "WARNING", "message": "\u26a0\ufe0f RATE LIMIT (openai/gpt-oss-120b): Blacklisting index 18 for 120s. Error: Error code: 429 - {'error': {'message': 'Rate limit reached for model `openai/gpt-oss-120b` in organization `org_01kgq9f82yfzeranqcvbwf8efw` service tier `on_demand` on tokens per minute (TPM): Limit 8000, Used 7662, Requested 2136. Please try again in 13.485s. Need more tokens? Upgrade to Dev Tier today at https://console.groq.com/settings/billing', 'type': 'tokens', 'code': 'rate_limit_exceeded'}}"}
+WARNING:app.engine.nodes:⚠️ RATE LIMIT (openai/gpt-oss-120b): Blacklisting index 18 for 120s. Error: Error code: 429 - {'error': {'message': 'Rate limit reached for model `openai/gpt-oss-120b` in organization `org_01kgq9f82yfzeranqcvbwf8efw` service tier `on_demand` on tokens per minute (TPM): Limit 8000, Used 7662, Requested 2136. Please try again in 13.485s. Need more tokens? Upgrade to Dev Tier today at https://console.groq.com/settings/billing', 'type': 'tokens', 'code': 'rate_limit_exceeded'}}
+{"asctime": "2026-02-20 18:31:56,983", "name": "app.engine.nodes", "levelname": "WARNING", "message": "\ud83d\udd04 ROTATION: Switching to GROQ | Model: qwen/qwen-2.5-coder-32b | KeyIdx: 2 due to Rate Limit Recovery"}
+WARNING:app.engine.nodes:🔄 ROTATION: Switching to GROQ | Model: qwen/qwen-2.5-coder-32b | KeyIdx: 2 due to Rate Limit Recovery
+{"asctime": "2026-02-20 18:31:56,983", "name": "app.engine.nodes", "levelname": "INFO", "message": "\ud83e\udd16 Initializing LLM: Provider=GROQ, Model=qwen/qwen-2.5-coder-32b, Key Index=2"}
+INFO:app.engine.nodes:🤖 Initializing LLM: Provider=GROQ, Model=qwen/qwen-2.5-coder-32b, Key Index=2
+{"asctime": "2026-02-20 18:31:57,008", "name": "app.engine.nodes", "levelname": "INFO", "message": "\ud83d\ude80 LLM Call (GROQ): Model=qwen/qwen-2.5-coder-32b, Key=2, Attempt=2/20"}
+INFO:app.engine.nodes:🚀 LLM Call (GROQ): Model=qwen/qwen-2.5-coder-32b, Key=2, Attempt=2/20
+INFO:httpx:HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 404 Not Found"
+{"asctime": "2026-02-20 18:31:57,068", "name": "app.engine.nodes", "levelname": "WARNING", "message": "\u274c SCHEMA/400 ERROR (qwen/qwen-2.5-coder-32b): Rotating to try different model."}
+WARNING:app.engine.nodes:❌ SCHEMA/400 ERROR (qwen/qwen-2.5-coder-32b): Rotating to try different model.
+{"asctime": "2026-02-20 18:31:57,068", "name": "app.engine.nodes", "levelname": "WARNING", "message": "\ud83d\udd04 ROTATION: Switching to GROQ | Model: llama-3.1-8b-instant | KeyIdx: 1 due to 400 Error"}
+WARNING:app.engine.nodes:🔄 ROTATION: Switching to GROQ | Model: llama-3.1-8b-instant | KeyIdx: 1 due to 400 Error
+{"asctime": "2026-02-20 18:31:57,068", "name": "app.engine.nodes", "levelname": "INFO", "message": "\ud83e\udd16 Initializing LLM: Provider=GROQ, Model=llama-3.1-8b-instant, Key Index=1"}
+INFO:app.engine.nodes:🤖 Initializing LLM: Provider=GROQ, Model=llama-3.1-8b-instant, Key Index=1
+{"asctime": "2026-02-20 18:31:57,091", "name": "app.engine.nodes", "levelname": "INFO", "message": "\ud83d\ude80 LLM Call (GROQ): Model=llama-3.1-8b-instant, Key=1, Attempt=3/20"}
+INFO:app.engine.nodes:🚀 LLM Call (GROQ): Model=llama-3.1-8b-instant, Key=1, Attempt=3/20
+INFO:httpx:HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 400 Bad Request"
+{"asctime": "2026-02-20 18:31:57,665", "name": "app.engine.nodes", "levelname": "WARNING", "message": "\u23f3 TIMEOUT (llama-3.1-8b-instant): Rotating immediately."}
+WARNING:app.engine.nodes:⏳ TIMEOUT (llama-3.1-8b-instant): Rotating immediately.
+{"asctime": "2026-02-20 18:31:57,665", "name": "app.engine.nodes", "levelname": "WARNING", "message": "\ud83d\udd04 ROTATION: Switching to GROQ | Model: llama3-70b-8192 | KeyIdx: 1 due to Timeout"}
+WARNING:app.engine.nodes:🔄 ROTATION: Switching to GROQ | Model: llama3-70b-8192 | KeyIdx: 1 due to Timeout
+{"asctime": "2026-02-20 18:31:57,665", "name": "app.engine.nodes", "levelname": "INFO", "message": "\ud83e\udd16 Initializing LLM: Provider=GROQ, Model=llama3-70b-8192, Key Index=1"}
+INFO:app.engine.nodes:🤖 Initializing LLM: Provider=GROQ, Model=llama3-70b-8192, Key Index=1
+{"asctime": "2026-02-20 18:31:57,688", "name": "app.engine.nodes", "levelname": "INFO", "message": "\ud83d\ude80 LLM Call (GROQ): Model=llama3-70b-8192, Key=1, Attempt=4/20"}
+INFO:app.engine.nodes:🚀 LLM Call (GROQ): Model=llama3-70b-8192, Key=1, Attempt=4/20
+INFO:httpx:HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 400 Bad Request"
+{"asctime": "2026-02-20 18:31:57,748", "name": "app.engine.nodes", "levelname": "WARNING", "message": "\u274c SCHEMA/400 ERROR (llama3-70b-8192): Rotating to try different model."}
+WARNING:app.engine.nodes:❌ SCHEMA/400 ERROR (llama3-70b-8192): Rotating to try different model.
+{"asctime": "2026-02-20 18:31:57,748", "name": "app.engine.nodes", "levelname": "WARNING", "message": "\ud83d\udd04 ROTATION: Switching to GROQ | Model: mixtral-8x7b-32768 | KeyIdx: 1 due to 400 Error"}
+WARNING:app.engine.nodes:🔄 ROTATION: Switching to GROQ | Model: mixtral-8x7b-32768 | KeyIdx: 1 due to 400 Error
+{"asctime": "2026-02-20 18:31:57,748", "name": "app.engine.nodes", "levelname": "INFO", "message": "\ud83e\udd16 Initializing LLM: Provider=GROQ, Model=mixtral-8x7b-32768, Key Index=1"}
+INFO:app.engine.nodes:🤖 Initializing LLM: Provider=GROQ, Model=mixtral-8x7b-32768, Key Index=1
+{"asctime": "2026-02-20 18:31:57,773", "name": "app.engine.nodes", "levelname": "INFO", "message": "\ud83d\ude80 LLM Call (GROQ): Model=mixtral-8x7b-32768, Key=1, Attempt=5/20"}
+INFO:app.engine.nodes:🚀 LLM Call (GROQ): Model=mixtral-8x7b-32768, Key=1, Attempt=5/20
+INFO:httpx:HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 400 Bad Request"
+{"asctime": "2026-02-20 18:31:57,835", "name": "app.engine.nodes", "levelname": "WARNING", "message": "\u274c SCHEMA/400 ERROR (mixtral-8x7b-32768): Rotating to try different model."}
+WARNING:app.engine.nodes:❌ SCHEMA/400 ERROR (mixtral-8x7b-32768): Rotating to try different model.
+{"asctime": "2026-02-20 18:31:57,835", "name": "app.engine.nodes", "levelname": "WARNING", "message": "\ud83d\udd04 ROTATION: Switching to GROQ | Model: gemma2-9b-it | KeyIdx: 1 due to 400 Error"}
+WARNING:app.engine.nodes:🔄 ROTATION: Switching to GROQ | Model: gemma2-9b-it | KeyIdx: 1 due to 400 Error
+{"asctime": "2026-02-20 18:31:57,835", "name": "app.engine.nodes", "levelname": "INFO", "message": "\ud83e\udd16 Initializing LLM: Provider=GROQ, Model=gemma2-9b-it, Key Index=1"}
+INFO:app.engine.nodes:🤖 Initializing LLM: Provider=GROQ, Model=gemma2-9b-it, Key Index=1
+{"asctime": "2026-02-20 18:31:57,857", "name": "app.engine.nodes", "levelname": "INFO", "message": "\ud83d\ude80 LLM Call (GROQ): Model=gemma2-9b-it, Key=1, Attempt=6/20"}
+INFO:app.engine.nodes:🚀 LLM Call (GROQ): Model=gemma2-9b-it, Key=1, Attempt=6/20
+INFO:httpx:HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 400 Bad Request"
+{"asctime": "2026-02-20 18:31:57,922", "name": "app.engine.nodes", "levelname": "WARNING", "message": "\u274c SCHEMA/400 ERROR (gemma2-9b-it): Rotating to try different model."}
+WARNING:app.engine.nodes:❌ SCHEMA/400 ERROR (gemma2-9b-it): Rotating to try different model.
+{"asctime": "2026-02-20 18:31:57,922", "name": "app.engine.nodes", "levelname": "WARNING", "message": "\ud83d\udd04 ROTATION: Switching to GROQ | Model: qwen/qwen-2.5-32b | KeyIdx: 1 due to 400 Error"}
+WARNING:app.engine.nodes:🔄 ROTATION: Switching to GROQ | Model: qwen/qwen-2.5-32b | KeyIdx: 1 due to 400 Error
+{"asctime": "2026-02-20 18:31:57,922", "name": "app.engine.nodes", "levelname": "INFO", "message": "\ud83e\udd16 Initializing LLM: Provider=GROQ, Model=qwen/qwen-2.5-32b, Key Index=1"}
+INFO:app.engine.nodes:🤖 Initializing LLM: Provider=GROQ, Model=qwen/qwen-2.5-32b, Key Index=1
+{"asctime": "2026-02-20 18:31:57,946", "name": "app.engine.nodes", "levelname": "INFO", "message": "\ud83d\ude80 LLM Call (GROQ): Model=qwen/qwen-2.5-32b, Key=1, Attempt=7/20"}
+INFO:app.engine.nodes:🚀 LLM Call (GROQ): Model=qwen/qwen-2.5-32b, Key=1, Attempt=7/20
+INFO:httpx:HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 404 Not Found"
+{"asctime": "2026-02-20 18:31:58,012", "name": "app.engine.nodes", "levelname": "WARNING", "message": "\u274c SCHEMA/400 ERROR (qwen/qwen-2.5-32b): Rotating to try different model."}
+WARNING:app.engine.nodes:❌ SCHEMA/400 ERROR (qwen/qwen-2.5-32b): Rotating to try different model.
+{"asctime": "2026-02-20 18:31:58,012", "name": "app.engine.nodes", "levelname": "WARNING", "message": "\ud83d\udd04 ROTATION: Switching to GROQ | Model: deepseek-r1-distill-llama-70b | KeyIdx: 1 due to 400 Error"}
+WARNING:app.engine.nodes:🔄 ROTATION: Switching to GROQ | Model: deepseek-r1-distill-llama-70b | KeyIdx: 1 due to 400 Error
+{"asctime": "2026-02-20 18:31:58,012", "name": "app.engine.nodes", "levelname": "INFO", "message": "\ud83e\udd16 Initializing LLM: Provider=GROQ, Model=deepseek-r1-distill-llama-70b, Key Index=1"}
+INFO:app.engine.nodes:🤖 Initializing LLM: Provider=GROQ, Model=deepseek-r1-distill-llama-70b, Key Index=1
+{"asctime": "2026-02-20 18:31:58,037", "name": "app.engine.nodes", "levelname": "INFO", "message": "\ud83d\ude80 LLM Call (GROQ): Model=deepseek-r1-distill-llama-70b, Key=1, Attempt=8/20"}
+INFO:app.engine.nodes:🚀 LLM Call (GROQ): Model=deepseek-r1-distill-llama-70b, Key=1, Attempt=8/20
+INFO:httpx:HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 400 Bad Request"
+{"asctime": "2026-02-20 18:31:58,103", "name": "app.engine.nodes", "levelname": "WARNING", "message": "\u274c SCHEMA/400 ERROR (deepseek-r1-distill-llama-70b): Rotating to try different model."}
+WARNING:app.engine.nodes:❌ SCHEMA/400 ERROR (deepseek-r1-distill-llama-70b): Rotating to try different model.
+{"asctime": "2026-02-20 18:31:58,104", "name": "app.engine.nodes", "levelname": "WARNING", "message": "\ud83d\udd04 ROTATION: Switching to GROQ | Model: meta-llama/llama-3.3-70b-specdec | KeyIdx: 1 due to 400 Error"}
+WARNING:app.engine.nodes:🔄 ROTATION: Switching to GROQ | Model: meta-llama/llama-3.3-70b-specdec | KeyIdx: 1 due to 400 Error
+{"asctime": "2026-02-20 18:31:58,104", "name": "app.engine.nodes", "levelname": "INFO", "message": "\ud83e\udd16 Initializing LLM: Provider=GROQ, Model=meta-llama/llama-3.3-70b-specdec, Key Index=1"}
+INFO:app.engine.nodes:🤖 Initializing LLM: Provider=GROQ, Model=meta-llama/llama-3.3-70b-specdec, Key Index=1
+{"asctime": "2026-02-20 18:31:58,134", "name": "app.engine.nodes", "levelname": "INFO", "message": "\ud83d\ude80 LLM Call (GROQ): Model=meta-llama/llama-3.3-70b-specdec, Key=1, Attempt=9/20"}
+INFO:app.engine.nodes:🚀 LLM Call (GROQ): Model=meta-llama/llama-3.3-70b-specdec, Key=1, Attempt=9/20
+INFO:httpx:HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 404 Not Found"
+{"asctime": "2026-02-20 18:31:58,202", "name": "app.engine.nodes", "levelname": "WARNING", "message": "\u274c SCHEMA/400 ERROR (meta-llama/llama-3.3-70b-specdec): Rotating to try different model."}
+WARNING:app.engine.nodes:❌ SCHEMA/400 ERROR (meta-llama/llama-3.3-70b-specdec): Rotating to try different model.
+{"asctime": "2026-02-20 18:31:58,202", "name": "app.engine.nodes", "levelname": "WARNING", "message": "\ud83d\udd04 ROTATION: Switching to GROQ | Model: meta-llama/llama-3.3-70b-versatile | KeyIdx: 1 due to 400 Error"}
+WARNING:app.engine.nodes:🔄 ROTATION: Switching to GROQ | Model: meta-llama/llama-3.3-70b-versatile | KeyIdx: 1 due to 400 Error
+{"asctime": "2026-02-20 18:31:58,203", "name": "app.engine.nodes", "levelname": "INFO", "message": "\ud83e\udd16 Initializing LLM: Provider=GROQ, Model=meta-llama/llama-3.3-70b-versatile, Key Index=1"}
+INFO:app.engine.nodes:🤖 Initializing LLM: Provider=GROQ, Model=meta-llama/llama-3.3-70b-versatile, Key Index=1
+{"asctime": "2026-02-20 18:31:58,228", "name": "app.engine.nodes", "levelname": "INFO", "message": "\ud83d\ude80 LLM Call (GROQ): Model=meta-llama/llama-3.3-70b-versatile, Key=1, Attempt=10/20"}
+INFO:app.engine.nodes:🚀 LLM Call (GROQ): Model=meta-llama/llama-3.3-70b-versatile, Key=1, Attempt=10/20
+INFO:httpx:HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 404 Not Found"
+{"asctime": "2026-02-20 18:31:58,299", "name": "app.engine.nodes", "levelname": "WARNING", "message": "\u274c SCHEMA/400 ERROR (meta-llama/llama-3.3-70b-versatile): Rotating to try different model."}
+WARNING:app.engine.nodes:❌ SCHEMA/400 ERROR (meta-llama/llama-3.3-70b-versatile): Rotating to try different model.
+{"asctime": "2026-02-20 18:31:58,299", "name": "app.engine.nodes", "levelname": "WARNING", "message": "\ud83d\udd04 ROTATION: Switching to GROQ | Model: qwen/qwen-2.5-coder-32b | KeyIdx: 1 due to 400 Error"}
+WARNING:app.engine.nodes:🔄 ROTATION: Switching to GROQ | Model: qwen/qwen-2.5-coder-32b | KeyIdx: 1 due to 400 Error
+{"asctime": "2026-02-20 18:31:58,299", "name": "app.engine.nodes", "levelname": "INFO", "message": "\ud83e\udd16 Initializing LLM: Provider=GROQ, Model=qwen/qwen-2.5-coder-32b, Key Index=1"}
+INFO:app.engine.nodes:🤖 Initializing LLM: Provider=GROQ, Model=qwen/qwen-2.5-coder-32b, Key Index=1
+{"asctime": "2026-02-20 18:31:58,323", "name": "app.engine.nodes", "levelname": "INFO", "message": "\ud83d\ude80 LLM Call (GROQ): Model=qwen/qwen-2.5-coder-32b, Key=1, Attempt=11/20"}
+INFO:app.engine.nodes:🚀 LLM Call (GROQ): Model=qwen/qwen-2.5-coder-32b, Key=1, Attempt=11/20
+INFO:httpx:HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 404 Not Found"
+{"asctime": "2026-02-20 18:31:58,388", "name": "app.engine.nodes", "levelname": "WARNING", "message": "\u274c SCHEMA/400 ERROR (qwen/qwen-2.5-coder-32b): Rotating to try different model."}
+WARNING:app.engine.nodes:❌ SCHEMA/400 ERROR (qwen/qwen-2.5-coder-32b): Rotating to try different model.
+{"asctime": "2026-02-20 18:31:58,388", "name": "app.engine.nodes", "levelname": "WARNING", "message": "\ud83d\udd04 ROTATION: Switching to GROQ | Model: llama-3.1-8b-instant | KeyIdx: 2 due to 400 Error"}
+WARNING:app.engine.nodes:🔄 ROTATION: Switching to GROQ | Model: llama-3.1-8b-instant | KeyIdx: 2 due to 400 Error
+{"asctime": "2026-02-20 18:31:58,389", "name": "app.engine.nodes", "levelname": "INFO", "message": "\ud83e\udd16 Initializing LLM: Provider=GROQ, Model=llama-3.1-8b-instant, Key Index=2"}
+INFO:app.engine.nodes:🤖 Initializing LLM: Provider=GROQ, Model=llama-3.1-8b-instant, Key Index=2
+{"asctime": "2026-02-20 18:31:58,412", "name": "app.engine.nodes", "levelname": "INFO", "message": "\ud83d\ude80 LLM Call (GROQ): Model=llama-3.1-8b-instant, Key=2, Attempt=12/20"}
+INFO:app.engine.nodes:🚀 LLM Call (GROQ): Model=llama-3.1-8b-instant, Key=2, Attempt=12/20
+INFO:httpx:HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 400 Bad Request"
+{"asctime": "2026-02-20 18:31:59,038", "name": "app.engine.nodes", "levelname": "WARNING", "message": "\u274c SCHEMA/400 ERROR (llama-3.1-8b-instant): Rotating to try different model."}
+WARNING:app.engine.nodes:❌ SCHEMA/400 ERROR (llama-3.1-8b-instant): Rotating to try different model.
+{"asctime": "2026-02-20 18:31:59,038", "name": "app.engine.nodes", "levelname": "WARNING", "message": "\ud83d\udd04 ROTATION: Switching to GROQ | Model: llama3-70b-8192 | KeyIdx: 2 due to 400 Error"}
+WARNING:app.engine.nodes:🔄 ROTATION: Switching to GROQ | Model: llama3-70b-8192 | KeyIdx: 2 due to 400 Error
+{"asctime": "2026-02-20 18:31:59,038", "name": "app.engine.nodes", "levelname": "INFO", "message": "\ud83e\udd16 Initializing LLM: Provider=GROQ, Model=llama3-70b-8192, Key Index=2"}
+INFO:app.engine.nodes:🤖 Initializing LLM: Provider=GROQ, Model=llama3-70b-8192, Key Index=2
+{"asctime": "2026-02-20 18:31:59,061", "name": "app.engine.nodes", "levelname": "INFO", "message": "\ud83d\ude80 LLM Call (GROQ): Model=llama3-70b-8192, Key=2, Attempt=13/20"}
+INFO:app.engine.nodes:🚀 LLM Call (GROQ): Model=llama3-70b-8192, Key=2, Attempt=13/20
+INFO:httpx:HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 400 Bad Request"
+{"asctime": "2026-02-20 18:31:59,121", "name": "app.engine.nodes", "levelname": "WARNING", "message": "\u274c SCHEMA/400 ERROR (llama3-70b-8192): Rotating to try different model."}
+WARNING:app.engine.nodes:❌ SCHEMA/400 ERROR (llama3-70b-8192): Rotating to try different model.
+{"asctime": "2026-02-20 18:31:59,121", "name": "app.engine.nodes", "levelname": "WARNING", "message": "\ud83d\udd04 ROTATION: Switching to GROQ | Model: mixtral-8x7b-32768 | KeyIdx: 2 due to 400 Error"}
+WARNING:app.engine.nodes:🔄 ROTATION: Switching to GROQ | Model: mixtral-8x7b-32768 | KeyIdx: 2 due to 400 Error
+{"asctime": "2026-02-20 18:31:59,121", "name": "app.engine.nodes", "levelname": "INFO", "message": "\ud83e\udd16 Initializing LLM: Provider=GROQ, Model=mixtral-8x7b-32768, Key Index=2"}
+INFO:app.engine.nodes:🤖 Initializing LLM: Provider=GROQ, Model=mixtral-8x7b-32768, Key Index=2
+{"asctime": "2026-02-20 18:31:59,143", "name": "app.engine.nodes", "levelname": "INFO", "message": "\ud83d\ude80 LLM Call (GROQ): Model=mixtral-8x7b-32768, Key=2, Attempt=14/20"}
+INFO:app.engine.nodes:🚀 LLM Call (GROQ): Model=mixtral-8x7b-32768, Key=2, Attempt=14/20
+INFO:httpx:HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 400 Bad Request"
+{"asctime": "2026-02-20 18:31:59,204", "name": "app.engine.nodes", "levelname": "WARNING", "message": "\u274c SCHEMA/400 ERROR (mixtral-8x7b-32768): Rotating to try different model."}
+WARNING:app.engine.nodes:❌ SCHEMA/400 ERROR (mixtral-8x7b-32768): Rotating to try different model.
+{"asctime": "2026-02-20 18:31:59,204", "name": "app.engine.nodes", "levelname": "WARNING", "message": "\ud83d\udd04 ROTATION: Switching to GROQ | Model: gemma2-9b-it | KeyIdx: 2 due to 400 Error"}
+WARNING:app.engine.nodes:🔄 ROTATION: Switching to GROQ | Model: gemma2-9b-it | KeyIdx: 2 due to 400 Error
+{"asctime": "2026-02-20 18:31:59,204", "name": "app.engine.nodes", "levelname": "INFO", "message": "\ud83e\udd16 Initializing LLM: Provider=GROQ, Model=gemma2-9b-it, Key Index=2"}
+INFO:app.engine.nodes:🤖 Initializing LLM: Provider=GROQ, Model=gemma2-9b-it, Key Index=2
+{"asctime": "2026-02-20 18:31:59,226", "name": "app.engine.nodes", "levelname": "INFO", "message": "\ud83d\ude80 LLM Call (GROQ): Model=gemma2-9b-it, Key=2, Attempt=15/20"}
+INFO:app.engine.nodes:🚀 LLM Call (GROQ): Model=gemma2-9b-it, Key=2, Attempt=15/20
+INFO:httpx:HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 400 Bad Request"
+{"asctime": "2026-02-20 18:31:59,287", "name": "app.engine.nodes", "levelname": "WARNING", "message": "\u274c SCHEMA/400 ERROR (gemma2-9b-it): Rotating to try different model."}
+WARNING:app.engine.nodes:❌ SCHEMA/400 ERROR (gemma2-9b-it): Rotating to try different model.
+{"asctime": "2026-02-20 18:31:59,287", "name": "app.engine.nodes", "levelname": "WARNING", "message": "\ud83d\udd04 ROTATION: Switching to GROQ | Model: qwen/qwen-2.5-32b | KeyIdx: 2 due to 400 Error"}
+WARNING:app.engine.nodes:🔄 ROTATION: Switching to GROQ | Model: qwen/qwen-2.5-32b | KeyIdx: 2 due to 400 Error
+{"asctime": "2026-02-20 18:31:59,287", "name": "app.engine.nodes", "levelname": "INFO", "message": "\ud83e\udd16 Initializing LLM: Provider=GROQ, Model=qwen/qwen-2.5-32b, Key Index=2"}
+INFO:app.engine.nodes:🤖 Initializing LLM: Provider=GROQ, Model=qwen/qwen-2.5-32b, Key Index=2
+{"asctime": "2026-02-20 18:31:59,311", "name": "app.engine.nodes", "levelname": "INFO", "message": "\ud83d\ude80 LLM Call (GROQ): Model=qwen/qwen-2.5-32b, Key=2, Attempt=16/20"}
+INFO:app.engine.nodes:🚀 LLM Call (GROQ): Model=qwen/qwen-2.5-32b, Key=2, Attempt=16/20
+INFO:httpx:HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 404 Not Found"
+{"asctime": "2026-02-20 18:31:59,381", "name": "app.engine.nodes", "levelname": "WARNING", "message": "\u274c SCHEMA/400 ERROR (qwen/qwen-2.5-32b): Rotating to try different model."}
+WARNING:app.engine.nodes:❌ SCHEMA/400 ERROR (qwen/qwen-2.5-32b): Rotating to try different model.
+{"asctime": "2026-02-20 18:31:59,381", "name": "app.engine.nodes", "levelname": "WARNING", "message": "\ud83d\udd04 ROTATION: Switching to GROQ | Model: deepseek-r1-distill-llama-70b | KeyIdx: 2 due to 400 Error"}
+WARNING:app.engine.nodes:🔄 ROTATION: Switching to GROQ | Model: deepseek-r1-distill-llama-70b | KeyIdx: 2 due to 400 Error
+{"asctime": "2026-02-20 18:31:59,381", "name": "app.engine.nodes", "levelname": "INFO", "message": "\ud83e\udd16 Initializing LLM: Provider=GROQ, Model=deepseek-r1-distill-llama-70b, Key Index=2"}
+INFO:app.engine.nodes:🤖 Initializing LLM: Provider=GROQ, Model=deepseek-r1-distill-llama-70b, Key Index=2
+{"asctime": "2026-02-20 18:31:59,409", "name": "app.engine.nodes", "levelname": "INFO", "message": "\ud83d\ude80 LLM Call (GROQ): Model=deepseek-r1-distill-llama-70b, Key=2, Attempt=17/20"}
+INFO:app.engine.nodes:🚀 LLM Call (GROQ): Model=deepseek-r1-distill-llama-70b, Key=2, Attempt=17/20
+INFO:httpx:HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 400 Bad Request"
+{"asctime": "2026-02-20 18:31:59,477", "name": "app.engine.nodes", "levelname": "WARNING", "message": "\u274c SCHEMA/400 ERROR (deepseek-r1-distill-llama-70b): Rotating to try different model."}
+WARNING:app.engine.nodes:❌ SCHEMA/400 ERROR (deepseek-r1-distill-llama-70b): Rotating to try different model.
+{"asctime": "2026-02-20 18:31:59,477", "name": "app.engine.nodes", "levelname": "WARNING", "message": "\ud83d\udd04 ROTATION: Switching to GROQ | Model: meta-llama/llama-3.3-70b-specdec | KeyIdx: 2 due to 400 Error"}
+WARNING:app.engine.nodes:🔄 ROTATION: Switching to GROQ | Model: meta-llama/llama-3.3-70b-specdec | KeyIdx: 2 due to 400 Error
+{"asctime": "2026-02-20 18:31:59,477", "name": "app.engine.nodes", "levelname": "INFO", "message": "\ud83e\udd16 Initializing LLM: Provider=GROQ, Model=meta-llama/llama-3.3-70b-specdec, Key Index=2"}
+INFO:app.engine.nodes:🤖 Initializing LLM: Provider=GROQ, Model=meta-llama/llama-3.3-70b-specdec, Key Index=2
+{"asctime": "2026-02-20 18:31:59,509", "name": "app.engine.nodes", "levelname": "INFO", "message": "\ud83d\ude80 LLM Call (GROQ): Model=meta-llama/llama-3.3-70b-specdec, Key=2, Attempt=18/20"}
+INFO:app.engine.nodes:🚀 LLM Call (GROQ): Model=meta-llama/llama-3.3-70b-specdec, Key=2, Attempt=18/20
+INFO:httpx:HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 404 Not Found"
+{"asctime": "2026-02-20 18:31:59,581", "name": "app.engine.nodes", "levelname": "WARNING", "message": "\u274c SCHEMA/400 ERROR (meta-llama/llama-3.3-70b-specdec): Rotating to try different model."}
+WARNING:app.engine.nodes:❌ SCHEMA/400 ERROR (meta-llama/llama-3.3-70b-specdec): Rotating to try different model.
+{"asctime": "2026-02-20 18:31:59,581", "name": "app.engine.nodes", "levelname": "WARNING", "message": "\ud83d\udd04 ROTATION: Switching to GROQ | Model: meta-llama/llama-3.3-70b-versatile | KeyIdx: 2 due to 400 Error"}
+WARNING:app.engine.nodes:🔄 ROTATION: Switching to GROQ | Model: meta-llama/llama-3.3-70b-versatile | KeyIdx: 2 due to 400 Error
+{"asctime": "2026-02-20 18:31:59,581", "name": "app.engine.nodes", "levelname": "INFO", "message": "\ud83e\udd16 Initializing LLM: Provider=GROQ, Model=meta-llama/llama-3.3-70b-versatile, Key Index=2"}
+INFO:app.engine.nodes:🤖 Initializing LLM: Provider=GROQ, Model=meta-llama/llama-3.3-70b-versatile, Key Index=2
+{"asctime": "2026-02-20 18:31:59,603", "name": "app.engine.nodes", "levelname": "INFO", "message": "\ud83d\ude80 LLM Call (GROQ): Model=meta-llama/llama-3.3-70b-versatile, Key=2, Attempt=19/20"}
+INFO:app.engine.nodes:🚀 LLM Call (GROQ): Model=meta-llama/llama-3.3-70b-versatile, Key=2, Attempt=19/20
+INFO:httpx:HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 404 Not Found"
+{"asctime": "2026-02-20 18:31:59,664", "name": "app.engine.nodes", "levelname": "WARNING", "message": "\u274c SCHEMA/400 ERROR (meta-llama/llama-3.3-70b-versatile): Rotating to try different model."}
+WARNING:app.engine.nodes:❌ SCHEMA/400 ERROR (meta-llama/llama-3.3-70b-versatile): Rotating to try different model.
+{"asctime": "2026-02-20 18:31:59,664", "name": "app.engine.nodes", "levelname": "WARNING", "message": "\ud83d\udd04 ROTATION: Switching to GROQ | Model: qwen/qwen-2.5-coder-32b | KeyIdx: 2 due to 400 Error"}
+WARNING:app.engine.nodes:🔄 ROTATION: Switching to GROQ | Model: qwen/qwen-2.5-coder-32b | KeyIdx: 2 due to 400 Error
+{"asctime": "2026-02-20 18:31:59,664", "name": "app.engine.nodes", "levelname": "INFO", "message": "\ud83e\udd16 Initializing LLM: Provider=GROQ, Model=qwen/qwen-2.5-coder-32b, Key Index=2"}
+INFO:app.engine.nodes:🤖 Initializing LLM: Provider=GROQ, Model=qwen/qwen-2.5-coder-32b, Key Index=2
+{"asctime": "2026-02-20 18:31:59,688", "name": "app.engine.nodes", "levelname": "INFO", "message": "\ud83d\ude80 LLM Call (GROQ): Model=qwen/qwen-2.5-coder-32b, Key=2, Attempt=20/20"}
+INFO:app.engine.nodes:🚀 LLM Call (GROQ): Model=qwen/qwen-2.5-coder-32b, Key=2, Attempt=20/20
+INFO:httpx:HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 404 Not Found"
+{"asctime": "2026-02-20 18:31:59,745", "name": "app.engine.nodes", "levelname": "WARNING", "message": "\u274c SCHEMA/400 ERROR (qwen/qwen-2.5-coder-32b): Rotating to try different model."}
+WARNING:app.engine.nodes:❌ SCHEMA/400 ERROR (qwen/qwen-2.5-coder-32b): Rotating to try different model.
+{"asctime": "2026-02-20 18:31:59,745", "name": "app.engine.nodes", "levelname": "WARNING", "message": "\ud83d\udd04 ROTATION: Switching to GROQ | Model: llama-3.1-8b-instant | KeyIdx: 1 due to 400 Error"}
+WARNING:app.engine.nodes:🔄 ROTATION: Switching to GROQ | Model: llama-3.1-8b-instant | KeyIdx: 1 due to 400 Error
+{"asctime": "2026-02-20 18:31:59,745", "name": "app.engine.nodes", "levelname": "INFO", "message": "\ud83e\udd16 Initializing LLM: Provider=GROQ, Model=llama-3.1-8b-instant, Key Index=1"}
+INFO:app.engine.nodes:🤖 Initializing LLM: Provider=GROQ, Model=llama-3.1-8b-instant, Key Index=1
+{"asctime": "2026-02-20 18:31:59,768", "name": "app.engine.nodes", "levelname": "ERROR", "message": "\u274c Structured Detection Failed (Session 07e7b5f8-a89a-477e-ba84-7afec43a029a): All available LLM combinations (Groq & Google) are currently exhausted or rate limited."}
+ERROR:app.engine.nodes:❌ Structured Detection Failed (Session 07e7b5f8-a89a-477e-ba84-7afec43a029a): All available LLM combinations (Groq & Google) are currently exhausted or rate limited.
+{"asctime": "2026-02-20 18:31:59,768", "name": "app.engine.nodes", "levelname": "INFO", "message": "\ud83d\udd04 Attempting RAW LLM Fallback for session 07e7b5f8-a89a-477e-ba84-7afec43a029a"}
+INFO:app.engine.nodes:🔄 Attempting RAW LLM Fallback for session 07e7b5f8-a89a-477e-ba84-7afec43a029a
+{"asctime": "2026-02-20 18:31:59,768", "name": "app.engine.nodes", "levelname": "INFO", "message": "\ud83d\ude80 LLM Call (GROQ): Model=llama-3.1-8b-instant, Key=1, Attempt=1/20"}
+INFO:app.engine.nodes:🚀 LLM Call (GROQ): Model=llama-3.1-8b-instant, Key=1, Attempt=1/20
+INFO:httpx:HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+{"asctime": "2026-02-20 18:32:00,260", "name": "app.engine.nodes", "levelname": "INFO", "message": "\ud83d\ude80 LLM Call (GROQ): Model=llama-3.1-8b-instant, Key=1, Attempt=1/20"}
+INFO:app.engine.nodes:🚀 LLM Call (GROQ): Model=llama-3.1-8b-instant, Key=1, Attempt=1/20
+INFO:httpx:HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 400 Bad Request"
+{"asctime": "2026-02-20 18:32:00,817", "name": "app.engine.nodes", "levelname": "WARNING", "message": "\u274c SCHEMA/400 ERROR (llama-3.1-8b-instant): Rotating to try different model."}
+WARNING:app.engine.nodes:❌ SCHEMA/400 ERROR (llama-3.1-8b-instant): Rotating to try different model.
+{"asctime": "2026-02-20 18:32:00,817", "name": "app.engine.nodes", "levelname": "WARNING", "message": "\ud83d\udd04 ROTATION: Switching to GROQ | Model: llama3-70b-8192 | KeyIdx: 1 due to 400 Error"}
+WARNING:app.engine.nodes:🔄 ROTATION: Switching to GROQ | Model: llama3-70b-8192 | KeyIdx: 1 due to 400 Error
+{"asctime": "2026-02-20 18:32:00,817", "name": "app.engine.nodes", "levelname": "INFO", "message": "\ud83e\udd16 Initializing LLM: Provider=GROQ, Model=llama3-70b-8192, Key Index=1"}
+INFO:app.engine.nodes:🤖 Initializing LLM: Provider=GROQ, Model=llama3-70b-8192, Key Index=1
+{"asctime": "2026-02-20 18:32:00,845", "name": "app.engine.nodes", "levelname": "INFO", "message": "\ud83d\ude80 LLM Call (GROQ): Model=llama3-70b-8192, Key=1, Attempt=2/20"}
+INFO:app.engine.nodes:🚀 LLM Call (GROQ): Model=llama3-70b-8192, Key=1, Attempt=2/20
+INFO:httpx:HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 400 Bad Request"
+{"asctime": "2026-02-20 18:32:00,913", "name": "app.engine.nodes", "levelname": "WARNING", "message": "\u274c SCHEMA/400 ERROR (llama3-70b-8192): Rotating to try different model."}
+WARNING:app.engine.nodes:❌ SCHEMA/400 ERROR (llama3-70b-8192): Rotating to try different model.
+{"asctime": "2026-02-20 18:32:00,913", "name": "app.engine.nodes", "levelname": "WARNING", "message": "\ud83d\udd04 ROTATION: Switching to GROQ | Model: mixtral-8x7b-32768 | KeyIdx: 1 due to 400 Error"}
+WARNING:app.engine.nodes:🔄 ROTATION: Switching to GROQ | Model: mixtral-8x7b-32768 | KeyIdx: 1 due to 400 Error
+{"asctime": "2026-02-20 18:32:00,913", "name": "app.engine.nodes", "levelname": "INFO", "message": "\ud83e\udd16 Initializing LLM: Provider=GROQ, Model=mixtral-8x7b-32768, Key Index=1"}
+INFO:app.engine.nodes:🤖 Initializing LLM: Provider=GROQ, Model=mixtral-8x7b-32768, Key Index=1
+{"asctime": "2026-02-20 18:32:00,939", "name": "app.engine.nodes", "levelname": "INFO", "message": "\ud83d\ude80 LLM Call (GROQ): Model=mixtral-8x7b-32768, Key=1, Attempt=3/20"}
+INFO:app.engine.nodes:🚀 LLM Call (GROQ): Model=mixtral-8x7b-32768, Key=1, Attempt=3/20
+INFO:httpx:HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 400 Bad Request"
+{"asctime": "2026-02-20 18:32:01,003", "name": "app.engine.nodes", "levelname": "WARNING", "message": "\u274c SCHEMA/400 ERROR (mixtral-8x7b-32768): Rotating to try different model."}
+WARNING:app.engine.nodes:❌ SCHEMA/400 ERROR (mixtral-8x7b-32768): Rotating to try different model.
+{"asctime": "2026-02-20 18:32:01,003", "name": "app.engine.nodes", "levelname": "WARNING", "message": "\ud83d\udd04 ROTATION: Switching to GROQ | Model: gemma2-9b-it | KeyIdx: 1 due to 400 Error"}
+WARNING:app.engine.nodes:🔄 ROTATION: Switching to GROQ | Model: gemma2-9b-it | KeyIdx: 1 due to 400 Error
+{"asctime": "2026-02-20 18:32:01,003", "name": "app.engine.nodes", "levelname": "INFO", "message": "\ud83e\udd16 Initializing LLM: Provider=GROQ, Model=gemma2-9b-it, Key Index=1"}
+INFO:app.engine.nodes:🤖 Initializing LLM: Provider=GROQ, Model=gemma2-9b-it, Key Index=1
+{"asctime": "2026-02-20 18:32:01,029", "name": "app.engine.nodes", "levelname": "INFO", "message": "\ud83d\ude80 LLM Call (GROQ): Model=gemma2-9b-it, Key=1, Attempt=4/20"}
+INFO:app.engine.nodes:🚀 LLM Call (GROQ): Model=gemma2-9b-it, Key=1, Attempt=4/20
+INFO:httpx:HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 400 Bad Request"
+{"asctime": "2026-02-20 18:32:01,084", "name": "app.engine.nodes", "levelname": "WARNING", "message": "\u274c SCHEMA/400 ERROR (gemma2-9b-it): Rotating to try different model."}
+WARNING:app.engine.nodes:❌ SCHEMA/400 ERROR (gemma2-9b-it): Rotating to try different model.
+{"asctime": "2026-02-20 18:32:01,084", "name": "app.engine.nodes", "levelname": "WARNING", "message": "\ud83d\udd04 ROTATION: Switching to GROQ | Model: qwen/qwen-2.5-32b | KeyIdx: 1 due to 400 Error"}
+WARNING:app.engine.nodes:🔄 ROTATION: Switching to GROQ | Model: qwen/qwen-2.5-32b | KeyIdx: 1 due to 400 Error
+{"asctime": "2026-02-20 18:32:01,084", "name": "app.engine.nodes", "levelname": "INFO", "message": "\ud83e\udd16 Initializing LLM: Provider=GROQ, Model=qwen/qwen-2.5-32b, Key Index=1"}
+INFO:app.engine.nodes:🤖 Initializing LLM: Provider=GROQ, Model=qwen/qwen-2.5-32b, Key Index=1
+{"asctime": "2026-02-20 18:32:01,108", "name": "app.engine.nodes", "levelname": "INFO", "message": "\ud83d\ude80 LLM Call (GROQ): Model=qwen/qwen-2.5-32b, Key=1, Attempt=5/20"}
+INFO:app.engine.nodes:🚀 LLM Call (GROQ): Model=qwen/qwen-2.5-32b, Key=1, Attempt=5/20
+INFO:httpx:HTTP Request: POST https://api.groq.com/opena
