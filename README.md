@@ -19,11 +19,8 @@ Uses a sophisticated state-machine (LangGraph) to manage the conversation flow. 
 - **Vulnerability Arc**: Dynamically adjusts the agent's tone to make the scammer believe they have a "vulnerable target," increasing their willingness to reveal sensitive accounts.
 - **Critic Validation**: A secondary LLM "critic" monitors the interaction to ensure high-fidelity detection and extraction.
 
-### 🎭 Dynamic Persona System
-The platform features localized personas calibrated for maximum cultural immersion:
+### Persona System
 - **RAJESH**: An elderly, technically-challenged grandfather. Uses "Hinglish," asks for "patience," and creates a perfect bait for urgent scams (KYC, Bank blocks).
-- **ANJALI**: A busy corporate professional. Uses corporate jargon, mentions "Slack pings," and creates delays that annoy yet hook the scammer.
-- **MR. SHARMA**: A meticulous, procedure-oriented retired official. Wastes time by asking for "proper documentation" and "official portals."
 
 ### 🔍 Automated Forensic Extraction
 The engine uses a hybrid **LLM + Regex** approach to extract 10+ types of forensic intelligence:
@@ -127,4 +124,5 @@ The platform tracks and reports key metrics designed for institutional forensic 
 This platform is designed for **Research and Law Enforcement Support** only. All extracted data is stored securely and is intended to be used for block-listing malicious accounts and domains.
 
 ---
+
 **Developed for the GUVI AI Hackathon 2026**
